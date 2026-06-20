@@ -87,3 +87,24 @@ SABIR7718_WSS.on('connection', (SYHaTE_W) => {
 
 S7HaTe_A.get('/', (SYHaTeS7_RQ, SABIR7718_RS) => SABIR7718_RS.status(200).json({ status: 'active' }));
 SYHaTeS7_S.listen(process.env.PORT || 3000);
+
+if (process.env.URL) {
+
+    (async () => {
+        try {
+            const res = await fetch(process.env.URL);
+            log('info', 'PING', `Pinged: ${process.env.URL} | Status: ${res.status}`);
+        } catch (err) {
+            log('error', 'PING', err.message);
+        }
+    })();
+
+    setInterval(async () => {
+        try {
+            const res = await fetch(process.env.URL);
+            log('info', 'PING', `Pinged: ${process.env.URL} | Status: ${res.status}`);
+        } catch (err) {
+            log('error', 'PING', err.message);
+        }
+    }, 5 * 60 * 1000);
+}
