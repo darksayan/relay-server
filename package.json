@@ -1,0 +1,27 @@
+{
+  "name": "relay-server",
+  "version": "1.0.0",
+  "description": "WebSocket Relay Server by SABIR7718 (VOIDSEC)",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "websocket",
+    "relay",
+    "server",
+    "ws",
+    "express"
+  ],
+  "author": "SABIR7718 (VOIDSEC)",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@sabir7718/log": "latest",
+    "express": "^5.1.0",
+    "ws": "^8.18.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
